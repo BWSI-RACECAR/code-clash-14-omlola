@@ -33,10 +33,10 @@ class Solution:
                 newmat[ie].append(0)
         for ie, e in enumerate(matrix):
             for ig, g in enumerate(e):
-                center = len(matrix)/2
+                center = (len(matrix)-1)/2
                 dx = center-ie
                 dy = center-ig
-                newmat[int(center-dy)][int(center-dx)] = g
+                newmat[int(center-dy)][int(center+dx)] = g
         return newmat
 
 
